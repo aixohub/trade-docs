@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>量化交易 on aixohub 投研室</title>
+    <link>http://localhost:1313/docs/quantitative-trading/</link>
+    <description>Recent content in 量化交易 on aixohub 投研室</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <atom:link href="http://localhost:1313/docs/quantitative-trading/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://localhost:1313/docs/quantitative-trading/quant/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/quantitative-trading/quant/</guid>
+      <description>&lt;h2 id=&#34;量化交易&#34;&gt;量化交易&lt;a class=&#34;anchor&#34; href=&#34;#%e9%87%8f%e5%8c%96%e4%ba%a4%e6%98%93&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;</description>
+    </item>
+  </channel>
+</rss>

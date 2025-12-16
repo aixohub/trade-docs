@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="schwab 嘉信证券 开户# 嘉信schwab 的介绍# Schwab Broker（嘉信理财) 是美国知名的金融服务公司，提供经纪、银行、财富管理等服务，主要面向个人投资者和机构投资者。
+以下是它的核心特点：
+1. 公司概述# 全名 Charles Schwab Corporation# 成立时间：1971年# 总部：美国德克萨斯州西湖（Westlake, Texas）# 主要业务：证券交易、投资咨询、财富管理、银行业务# 2. 交易与投资产品# Schwab 提供多种投资工具，包括：
+股票（Stocks）：支持美股市场的交易，提供零佣金交易（部分情况例外）。 期权（Options）：提供期权交易，费用较低，并有期权策略工具。 ETF（Exchange Traded Funds）：支持各种 ETF 交易，包括 Schwab 自家的 ETF。 共同基金（Mutual Funds）：提供大量免佣金的共同基金选择。 债券（Bonds）和固定收益产品：包括政府债券、公司债券和 CD。 期货（Futures）：支持部分期货交易。 外汇（Forex）：Schwab 本身不提供外汇交易，但可以通过其收购的 TD Ameritrade 进行。 3. 交易平台与 API# Schwab.com：网页版交易平台，适合普通投资者。# Schwab Mobile App：支持移动交易，提供账户管理、研究报告和交易功能。# thinkorswim（TOS）：收购 TD Ameritrade 后，Schwab 计划整合其强大的 thinkorswim 平台，适用于高阶交易者和量化投资者。# Schwab API：用于程序化交易，但功能不如 IBKR 强大。# 5. 账户类型# 个人投资账户：适合一般投资者# 退休账户（IRA、Roth IRA）：提供税收优惠# 企业投资账户# 托管账户（Trust &amp; Estate）# 嘉信schwab 的优势# 嘉信是美国券商，不需要存量证明
+">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/docs/schwab/schwab-open-account/">
+  <meta property="og:site_name" content="aixohub 投研室">
+  <meta property="og:title" content="schwab 嘉信证券 开户">
+  <meta property="og:description" content="schwab 嘉信证券 开户# 嘉信schwab 的介绍# Schwab Broker（嘉信理财) 是美国知名的金融服务公司，提供经纪、银行、财富管理等服务，主要面向个人投资者和机构投资者。
+以下是它的核心特点：
+1. 公司概述# 全名 Charles Schwab Corporation# 成立时间：1971年# 总部：美国德克萨斯州西湖（Westlake, Texas）# 主要业务：证券交易、投资咨询、财富管理、银行业务# 2. 交易与投资产品# Schwab 提供多种投资工具，包括：
+股票（Stocks）：支持美股市场的交易，提供零佣金交易（部分情况例外）。 期权（Options）：提供期权交易，费用较低，并有期权策略工具。 ETF（Exchange Traded Funds）：支持各种 ETF 交易，包括 Schwab 自家的 ETF。 共同基金（Mutual Funds）：提供大量免佣金的共同基金选择。 债券（Bonds）和固定收益产品：包括政府债券、公司债券和 CD。 期货（Futures）：支持部分期货交易。 外汇（Forex）：Schwab 本身不提供外汇交易，但可以通过其收购的 TD Ameritrade 进行。 3. 交易平台与 API# Schwab.com：网页版交易平台，适合普通投资者。# Schwab Mobile App：支持移动交易，提供账户管理、研究报告和交易功能。# thinkorswim（TOS）：收购 TD Ameritrade 后，Schwab 计划整合其强大的 thinkorswim 平台，适用于高阶交易者和量化投资者。# Schwab API：用于程序化交易，但功能不如 IBKR 强大。# 5. 账户类型# 个人投资账户：适合一般投资者# 退休账户（IRA、Roth IRA）：提供税收优惠# 企业投资账户# 托管账户（Trust &amp; Estate）# 嘉信schwab 的优势# 嘉信是美国券商，不需要存量证明">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+
+
+  <meta itemprop="name" content="schwab 嘉信证券 开户">
+  <meta itemprop="description" content="schwab 嘉信证券 开户# 嘉信schwab 的介绍# Schwab Broker（嘉信理财) 是美国知名的金融服务公司，提供经纪、银行、财富管理等服务，主要面向个人投资者和机构投资者。
+以下是它的核心特点：
+1. 公司概述# 全名 Charles Schwab Corporation# 成立时间：1971年# 总部：美国德克萨斯州西湖（Westlake, Texas）# 主要业务：证券交易、投资咨询、财富管理、银行业务# 2. 交易与投资产品# Schwab 提供多种投资工具，包括：
+股票（Stocks）：支持美股市场的交易，提供零佣金交易（部分情况例外）。 期权（Options）：提供期权交易，费用较低，并有期权策略工具。 ETF（Exchange Traded Funds）：支持各种 ETF 交易，包括 Schwab 自家的 ETF。 共同基金（Mutual Funds）：提供大量免佣金的共同基金选择。 债券（Bonds）和固定收益产品：包括政府债券、公司债券和 CD。 期货（Futures）：支持部分期货交易。 外汇（Forex）：Schwab 本身不提供外汇交易，但可以通过其收购的 TD Ameritrade 进行。 3. 交易平台与 API# Schwab.com：网页版交易平台，适合普通投资者。# Schwab Mobile App：支持移动交易，提供账户管理、研究报告和交易功能。# thinkorswim（TOS）：收购 TD Ameritrade 后，Schwab 计划整合其强大的 thinkorswim 平台，适用于高阶交易者和量化投资者。# Schwab API：用于程序化交易，但功能不如 IBKR 强大。# 5. 账户类型# 个人投资账户：适合一般投资者# 退休账户（IRA、Roth IRA）：提供税收优惠# 企业投资账户# 托管账户（Trust &amp; Estate）# 嘉信schwab 的优势# 嘉信是美国券商，不需要存量证明">
+  <meta itemprop="wordCount" content="148">
+
+<title>schwab 嘉信证券 开户 | aixohub 投研室</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/docs/schwab/schwab-open-account/">
+<link rel="stylesheet" href="/book.min.cc2c524ed250aac81b23d1f4af87344917b325208841feca0968fe450f570575.css" integrity="sha256-zCxSTtJQqsgbI9H0r4c0SRezJSCIQf7KCWj&#43;RQ9XBXU=" crossorigin="anonymous">
+
+
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/zh-cn.search.min.14b461fee3beb2995fe5d683fbd68b4833e387a74819eefd8e2f1af9498485ff.js" integrity="sha256-FLRh/uO&#43;splf5daD&#43;9aLSDPjh6dIGe79ji8a&#43;UmEhf8=" crossorigin="anonymous"></script>
+
+
+
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-docs">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>aixohub 投研室</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-296c586fa31146861517493958d7f839" class="toggle"  />
+    <label for="section-296c586fa31146861517493958d7f839" class="flex">
+      <a role="button" class="">
+        InteractiveBrokers 盈透证券</a>
+      <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/ibkr/ibkr-open-account-1/" class="">
+      IBKR 盈透证券 开户</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/ibkr/ibkr-open-account-2/" class="">
+      IBKR盈透证券申请多个账户&amp;内部转账</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/ibkr/ibkr-paper-trading/" class="">
+      IBKR 模拟交易</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/ibkr/ibkr-sell/" class="">
+      ibkr盈透证券美股-股票买卖</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/ibkr/ibkr-charge-ach/" class="">
+      ibkr 获取ACH转账的路由号码和账户号码</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/ibkr/ibkr-trade-perission/" class="">
+      ibkr 开通交易权限</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/ibkr/ibkr-tips-001/" class="">
+      IBKR盈透证券美股-推荐朋友注册IBKR获200美元</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/ibkr/ibkr-tips-002/" class="">
+      IBKR盈透证券-多个终端同时登录</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/ibkr/ibkr-tips-003/" class="">
+      IBKR盈透用户-避坑雪盈和盈透的绑定</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-6f99db89db42eaec50a16edb60be067b" class="toggle" checked />
+    <label for="section-6f99db89db42eaec50a16edb60be067b" class="flex">
+      <a role="button" class="">
+        schwab 嘉信证券</a>
+      <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/schwab/schwab-open-account/" class="active">
+      schwab 嘉信证券 开户</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/schwab/schwab-money-charge/" class="">
+      schwab 美股券商嘉信之电汇入金</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-e47883d16699e4e5b2339ffaaa0052f9" class="toggle"  />
+    <label for="section-e47883d16699e4e5b2339ffaaa0052f9" class="flex">
+      <a href="/docs/quantitative-trading/" class="">
+        量化交易</a>
+      <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/quantitative-trading/quant/" class="">
+      Quant</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>schwab 嘉信证券 开户</h3>
+
+  <label for="toc-control">
+    
+    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#schwab-嘉信证券-开户">schwab 嘉信证券 开户</a></li>
+    <li><a href="#嘉信schwab-的介绍">嘉信schwab 的介绍</a>
+      <ul>
+        <li><a href="#1-公司概述">1. 公司概述</a></li>
+        <li><a href="#2-交易与投资产品">2. 交易与投资产品</a></li>
+        <li><a href="#3-交易平台与-api">3. 交易平台与 API</a></li>
+        <li><a href="#5-账户类型">5. 账户类型</a></li>
+        <li><a href="#嘉信schwab-的优势">嘉信schwab 的优势</a></li>
+      </ul>
+    </li>
+    <li><a href="#嘉信schwab-开户步骤">嘉信schwab 开户步骤</a>
+      <ul>
+        <li><a href="#步骤1">步骤1</a></li>
+        <li><a href="#步骤2-选择账户类型">步骤2 选择账户类型</a></li>
+        <li><a href="#步骤3-填个人信息">步骤3 填个人信息</a></li>
+        <li><a href="#步骤4-上传文件">步骤4 上传文件</a></li>
+        <li><a href="#步骤5-等待审核">步骤5 等待审核</a></li>
+      </ul>
+    </li>
+    <li><a href="#下载嘉信schwab-app">下载嘉信schwab app</a>
+      <ul>
+        <li><a href="#手机端">手机端</a></li>
+        <li><a href="#电脑端">电脑端</a></li>
+      </ul>
+    </li>
+    <li><a href="#嘉信schwab-美元入金">嘉信schwab 美元入金</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h2 id="schwab-嘉信证券-开户">schwab 嘉信证券 开户<a class="anchor" href="#schwab-%e5%98%89%e4%bf%a1%e8%af%81%e5%88%b8-%e5%bc%80%e6%88%b7">#</a></h2>
+<h2 id="嘉信schwab-的介绍">嘉信schwab 的介绍<a class="anchor" href="#%e5%98%89%e4%bf%a1schwab-%e7%9a%84%e4%bb%8b%e7%bb%8d">#</a></h2>
+<p><strong>Schwab Broker（嘉信理财)</strong> 是美国知名的金融服务公司，提供经纪、银行、财富管理等服务，主要面向个人投资者和机构投资者。</p>
+<label class="book-image" for="book-image-toggle-0">
+  <input class="hidden toggle" type="checkbox" id="book-image-toggle-0" />
+  <img src="../pic/schwab-openaccount-001.png" alt="schwab-ach-01"loading="lazy"title="schwab-ach-01r" />
+</label>
+<p>以下是它的核心特点：</p>
+<h3 id="1-公司概述">1. 公司概述<a class="anchor" href="#1-%e5%85%ac%e5%8f%b8%e6%a6%82%e8%bf%b0">#</a></h3>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<ul>
+<li>
+<h4 id="全名-charles-schwab-corporation"> 全名 Charles Schwab Corporation<a class="anchor" href="#%e5%85%a8%e5%90%8d-charles-schwab-corporation">#</a></h4>
+</li>
+<li>
+<h4 id="成立时间1971年"> 成立时间：1971年<a class="anchor" href="#%e6%88%90%e7%ab%8b%e6%97%b6%e9%97%b41971%e5%b9%b4">#</a></h4>
+</li>
+<li>
+<h4 id="总部美国德克萨斯州西湖westlake-texas">总部：美国德克萨斯州西湖（Westlake, Texas）<a class="anchor" href="#%e6%80%bb%e9%83%a8%e7%be%8e%e5%9b%bd%e5%be%b7%e5%85%8b%e8%90%a8%e6%96%af%e5%b7%9e%e8%a5%bf%e6%b9%96westlake-texas">#</a></h4>
+</li>
+<li>
+<h4 id="主要业务证券交易投资咨询财富管理银行业务"> 主要业务：证券交易、投资咨询、财富管理、银行业务<a class="anchor" href="#%e4%b8%bb%e8%a6%81%e4%b8%9a%e5%8a%a1%e8%af%81%e5%88%b8%e4%ba%a4%e6%98%93%e6%8a%95%e8%b5%84%e5%92%a8%e8%af%a2%e8%b4%a2%e5%af%8c%e7%ae%a1%e7%90%86%e9%93%b6%e8%a1%8c%e4%b8%9a%e5%8a%a1">#</a></h4>
+</li>
+</ul>
+<!-- raw HTML omitted -->
+<h3 id="2-交易与投资产品">2. 交易与投资产品<a class="anchor" href="#2-%e4%ba%a4%e6%98%93%e4%b8%8e%e6%8a%95%e8%b5%84%e4%ba%a7%e5%93%81">#</a></h3>
+<p>Schwab 提供多种投资工具，包括：</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<ul>
+<li>股票（Stocks）：支持美股市场的交易，提供零佣金交易（部分情况例外）。</li>
+<li> 期权（Options）：提供期权交易，费用较低，并有期权策略工具。</li>
+<li> ETF（Exchange Traded Funds）：支持各种 ETF 交易，包括 Schwab 自家的 ETF。</li>
+<li> 共同基金（Mutual Funds）：提供大量免佣金的共同基金选择。</li>
+<li>债券（Bonds）和固定收益产品：包括政府债券、公司债券和 CD。</li>
+<li> 期货（Futures）：支持部分期货交易。</li>
+<li> 外汇（Forex）：Schwab 本身不提供外汇交易，但可以通过其收购的 TD Ameritrade 进行。</li>
+</ul>
+<!-- raw HTML omitted -->
+<h3 id="3-交易平台与-api">3. 交易平台与 API<a class="anchor" href="#3-%e4%ba%a4%e6%98%93%e5%b9%b3%e5%8f%b0%e4%b8%8e-api">#</a></h3>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<ul>
+<li>
+<h4 id="schwabcom网页版交易平台适合普通投资者">Schwab.com：网页版交易平台，适合普通投资者。<a class="anchor" href="#schwabcom%e7%bd%91%e9%a1%b5%e7%89%88%e4%ba%a4%e6%98%93%e5%b9%b3%e5%8f%b0%e9%80%82%e5%90%88%e6%99%ae%e9%80%9a%e6%8a%95%e8%b5%84%e8%80%85">#</a></h4>
+</li>
+<li>
+<h4 id="schwab-mobile-app支持移动交易提供账户管理研究报告和交易功能">Schwab Mobile App：支持移动交易，提供账户管理、研究报告和交易功能。<a class="anchor" href="#schwab-mobile-app%e6%94%af%e6%8c%81%e7%a7%bb%e5%8a%a8%e4%ba%a4%e6%98%93%e6%8f%90%e4%be%9b%e8%b4%a6%e6%88%b7%e7%ae%a1%e7%90%86%e7%a0%94%e7%a9%b6%e6%8a%a5%e5%91%8a%e5%92%8c%e4%ba%a4%e6%98%93%e5%8a%9f%e8%83%bd">#</a></h4>
+</li>
+<li>
+<h4 id="thinkorswimtos收购-td-ameritrade-后schwab-计划整合其强大的-thinkorswim-平台适用于高阶交易者和量化投资者">thinkorswim（TOS）：收购 TD Ameritrade 后，Schwab 计划整合其强大的 thinkorswim 平台，适用于高阶交易者和量化投资者。<a class="anchor" href="#thinkorswimtos%e6%94%b6%e8%b4%ad-td-ameritrade-%e5%90%8eschwab-%e8%ae%a1%e5%88%92%e6%95%b4%e5%90%88%e5%85%b6%e5%bc%ba%e5%a4%a7%e7%9a%84-thinkorswim-%e5%b9%b3%e5%8f%b0%e9%80%82%e7%94%a8%e4%ba%8e%e9%ab%98%e9%98%b6%e4%ba%a4%e6%98%93%e8%80%85%e5%92%8c%e9%87%8f%e5%8c%96%e6%8a%95%e8%b5%84%e8%80%85">#</a></h4>
+</li>
+<li>
+<h4 id="schwab-api用于程序化交易但功能不如-ibkr-强大">Schwab API：用于程序化交易，但功能不如 IBKR 强大。<a class="anchor" href="#schwab-api%e7%94%a8%e4%ba%8e%e7%a8%8b%e5%ba%8f%e5%8c%96%e4%ba%a4%e6%98%93%e4%bd%86%e5%8a%9f%e8%83%bd%e4%b8%8d%e5%a6%82-ibkr-%e5%bc%ba%e5%a4%a7">#</a></h4>
+</li>
+</ul>
+<!-- raw HTML omitted -->
+<h3 id="5-账户类型">5. 账户类型<a class="anchor" href="#5-%e8%b4%a6%e6%88%b7%e7%b1%bb%e5%9e%8b">#</a></h3>
+<ul>
+<li>
+<h4 id="个人投资账户适合一般投资者"> 个人投资账户：适合一般投资者<a class="anchor" href="#%e4%b8%aa%e4%ba%ba%e6%8a%95%e8%b5%84%e8%b4%a6%e6%88%b7%e9%80%82%e5%90%88%e4%b8%80%e8%88%ac%e6%8a%95%e8%b5%84%e8%80%85">#</a></h4>
+</li>
+<li>
+<h4 id="退休账户iraroth-ira提供税收优惠"> 退休账户（IRA、Roth IRA）：提供税收优惠<a class="anchor" href="#%e9%80%80%e4%bc%91%e8%b4%a6%e6%88%b7iraroth-ira%e6%8f%90%e4%be%9b%e7%a8%8e%e6%94%b6%e4%bc%98%e6%83%a0">#</a></h4>
+</li>
+<li>
+<h4 id="企业投资账户">企业投资账户<a class="anchor" href="#%e4%bc%81%e4%b8%9a%e6%8a%95%e8%b5%84%e8%b4%a6%e6%88%b7">#</a></h4>
+</li>
+<li>
+<h4 id="托管账户trust--estate"> 托管账户（Trust &amp; Estate）<a class="anchor" href="#%e6%89%98%e7%ae%a1%e8%b4%a6%e6%88%b7trust--estate">#</a></h4>
+</li>
+</ul>
+<h3 id="嘉信schwab-的优势">嘉信schwab 的优势<a class="anchor" href="#%e5%98%89%e4%bf%a1schwab-%e7%9a%84%e4%bc%98%e5%8a%bf">#</a></h3>
+<p>嘉信是美国券商，不需要存量证明</p>
+<p>没有ssn也能开，不需要存量证明，有护照就行</p>
+<p>国际账户没有入金要求</p>
+<p>美股美债etf都0佣金0平台费</p>
+<p>可以免费看实时期权数据，futu 要账上余额大于3000美元才能看实时数据，ibkr 要购买期权实时数据</p>
+<p>全程无需科学上网</p>
+<h2 id="嘉信schwab-开户步骤">嘉信schwab 开户步骤<a class="anchor" href="#%e5%98%89%e4%bf%a1schwab-%e5%bc%80%e6%88%b7%e6%ad%a5%e9%aa%a4">#</a></h2>
+<h3 id="步骤1">步骤1<a class="anchor" href="#%e6%ad%a5%e9%aa%a41">#</a></h3>
+<p>要注册 schwab international， 这个不需要美国的ssn</p>
+<p>注册美国的schwab 需要美国的ssn</p>
+<p>谷歌浏览器打开</p>
+<p><a href="https://international.schwab.com/open-account-intro/open-account?country=CH&amp;branchCode=EO&amp;refrid=REFERB96TF8EQ">https://international.schwab.com/open-account-intro</a></p>
+<h3 id="步骤2-选择账户类型">步骤2 选择账户类型<a class="anchor" href="#%e6%ad%a5%e9%aa%a42-%e9%80%89%e6%8b%a9%e8%b4%a6%e6%88%b7%e7%b1%bb%e5%9e%8b">#</a></h3>
+<p>选择账户类型，有个人账户，联合账户，这里选择个人账户</p>
+<label class="book-image" for="book-image-toggle-4">
+  <input class="hidden toggle" type="checkbox" id="book-image-toggle-4" />
+  <img src="../pic/schwab-openaccount-01.png" alt="schwab-ach-01"loading="lazy"title="schwab-ach-01r" />
+</label>
+<p>点击开始
+<img src="../pic/schwab-openaccount-02.png" alt="schwab-openaccount-02.png" /></p>
+<p>点击同意
+<label class="book-image" for="book-image-toggle-5">
+  <input class="hidden toggle" type="checkbox" id="book-image-toggle-5" />
+  <img src="../pic/schwab-openaccount-03.png" alt="schwab-ach-01"loading="lazy"title="schwab-ach-01r" />
+</label></p>
+<h3 id="步骤3-填个人信息">步骤3 填个人信息<a class="anchor" href="#%e6%ad%a5%e9%aa%a43-%e5%a1%ab%e4%b8%aa%e4%ba%ba%e4%bf%a1%e6%81%af">#</a></h3>
+<p>按要求填个人信息</p>
+<label class="book-image" for="book-image-toggle-6">
+  <input class="hidden toggle" type="checkbox" id="book-image-toggle-6" />
+  <img src="../pic/schwab-openaccount-04.png" alt="schwab-ach-01"loading="lazy"title="schwab-ach-01r" />
+</label>
+<p>注册可以填写中国手机号, 后面验证的时候会收不到验证码，</p>
+<p>中国内地可以打客服电话 <strong>400 120 6217</strong> ，电话会转到美国，所以要在美国的上班时间打，也就是国内21点后</p>
+<p>填写护照的信息</p>
+<label class="book-image" for="book-image-toggle-7">
+  <input class="hidden toggle" type="checkbox" id="book-image-toggle-7" />
+  <img src="../pic/schwab-openaccount-05.png" alt="schwab-ach-01"loading="lazy"title="schwab-ach-01r" />
+</label>
+<p>打开前面填写的电子邮箱，查看验证码，输入到下面</p>
+<label class="book-image" for="book-image-toggle-8">
+  <input class="hidden toggle" type="checkbox" id="book-image-toggle-8" />
+  <img src="../pic/schwab-openaccount-06.png" alt="schwab-ach-01"loading="lazy"title="schwab-ach-01r" />
+</label>
+<h3 id="步骤4-上传文件">步骤4 上传文件<a class="anchor" href="#%e6%ad%a5%e9%aa%a44-%e4%b8%8a%e4%bc%a0%e6%96%87%e4%bb%b6">#</a></h3>
+<p>后面就是上传护照照片，地址证明了，同意协议了</p>
+<p>中国的护照信息都在第一页上，所以两页的信息，都拍第一页的就可以</p>
+<h3 id="步骤5-等待审核">步骤5 等待审核<a class="anchor" href="#%e6%ad%a5%e9%aa%a45-%e7%ad%89%e5%be%85%e5%ae%a1%e6%a0%b8">#</a></h3>
+<p>等待审核通过➡️收到邮件通过，可以入金
+注册完毕，填写w-8ben表，这个可以免税</p>
+<h2 id="下载嘉信schwab-app">下载嘉信schwab app<a class="anchor" href="#%e4%b8%8b%e8%bd%bd%e5%98%89%e4%bf%a1schwab-app">#</a></h2>
+<h3 id="手机端">手机端<a class="anchor" href="#%e6%89%8b%e6%9c%ba%e7%ab%af">#</a></h3>
+<p>手机端有两款app thinkorswim 和 SCHWAB MOBILE</p>
+<p>建议使用 thinkorswim， thinkorswim 比 嘉信SCHWAB MOBILE 好用</p>
+<h3 id="电脑端">电脑端<a class="anchor" href="#%e7%94%b5%e8%84%91%e7%ab%af">#</a></h3>
+<p>下载 thinkorswim 电脑端需要先登录
+<a href="https://www.schwab.com/trading/thinkorswim/desktop">https://www.schwab.com/trading/thinkorswim/desktop</a></p>
+<h2 id="嘉信schwab-美元入金">嘉信schwab 美元入金<a class="anchor" href="#%e5%98%89%e4%bf%a1schwab-%e7%be%8e%e5%85%83%e5%85%a5%e9%87%91">#</a></h2>
+<p>如果有美国的银行卡，可以ach入金，ach入金可以免所有费用，</p>
+<p>没有的话只能电汇入金或者绑定wise入金,电汇入金的话，查看汇款方式如下</p>
+<label class="book-image" for="book-image-toggle-9">
+  <input class="hidden toggle" type="checkbox" id="book-image-toggle-9" />
+  <img src="../pic/schwab-openaccount-07.png" alt="schwab-ach-01"loading="lazy"title="schwab-ach-01r" />
+</label>
+<p>Account Number to Provide  这个后面8位就是 schwab 的账户ID</p>
+<p>然后就可以在银行端填写上述信息，发起电汇了</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+<div>
+
+</div>
+
+<div>
+
+</div>
+
+</div>
+
+
+
+
+
+  
+  
+  
+  <div class="flex flex-wrap justify-between">
+    <span>
+    
+      <a href="/docs/ibkr/ibkr-tips-003/" class="flex align-center">
+        <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+        <span>IBKR盈透用户-避坑雪盈和盈透的绑定</span>
+      </a>
+    
+    </span>
+    <span>
+    
+      <a href="/docs/schwab/schwab-money-charge/" class="flex align-center">
+        <span>schwab 美股券商嘉信之电汇入金</span>
+        <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+      </a>
+    
+    </span>
+  </div>
+  
+
+
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#schwab-嘉信证券-开户">schwab 嘉信证券 开户</a></li>
+    <li><a href="#嘉信schwab-的介绍">嘉信schwab 的介绍</a>
+      <ul>
+        <li><a href="#1-公司概述">1. 公司概述</a></li>
+        <li><a href="#2-交易与投资产品">2. 交易与投资产品</a></li>
+        <li><a href="#3-交易平台与-api">3. 交易平台与 API</a></li>
+        <li><a href="#5-账户类型">5. 账户类型</a></li>
+        <li><a href="#嘉信schwab-的优势">嘉信schwab 的优势</a></li>
+      </ul>
+    </li>
+    <li><a href="#嘉信schwab-开户步骤">嘉信schwab 开户步骤</a>
+      <ul>
+        <li><a href="#步骤1">步骤1</a></li>
+        <li><a href="#步骤2-选择账户类型">步骤2 选择账户类型</a></li>
+        <li><a href="#步骤3-填个人信息">步骤3 填个人信息</a></li>
+        <li><a href="#步骤4-上传文件">步骤4 上传文件</a></li>
+        <li><a href="#步骤5-等待审核">步骤5 等待审核</a></li>
+      </ul>
+    </li>
+    <li><a href="#下载嘉信schwab-app">下载嘉信schwab app</a>
+      <ul>
+        <li><a href="#手机端">手机端</a></li>
+        <li><a href="#电脑端">电脑端</a></li>
+      </ul>
+    </li>
+    <li><a href="#嘉信schwab-美元入金">嘉信schwab 美元入金</a></li>
+  </ul>
+</nav>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

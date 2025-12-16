@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Badges# Experimental, could change in the future or be removed
+Badges can be used to annotate your pages with additional information or mark specific places in markdown content.
+TitleValue Hugo0.147.6 BuildPassing Coverage25% Issues120
+Examples# Shortcode Output {{&lt; badge style=&#34;info&#34; title=&#34;hugo&#34; value=&#34;0.147.6&#34; &gt;}} Hugo0.147.6 {{&lt; badge style=&#34;success&#34; title=&#34;Build&#34; value=&#34;Passing&#34; &gt;}} BuildPassing {{&lt; badge style=&#34;warning&#34; title=&#34;Coverage&#34; value=&#34;25%&#34; &gt;}} Coverage25% {{&lt; badge style=&#34;danger&#34; title=&#34;Issues&#34; value=&#34;120&#34; &gt;}} Issues120 {{&lt; badge style=&#34;info&#34; title=&#34;Title&#34; &gt;}} Title {{&lt; badge style=&#34;info&#34; value=&#34;Value&#34; &gt;}} Value {{&lt; badge title=&#34;Default&#34; &gt;}} Default Use in links# A badge can be wrapped in markdown link producing following result: Hugo0.147.6
+">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/posts/example/shortcodes/experimental/badges/">
+  <meta property="og:site_name" content="aixohub 投研室">
+  <meta property="og:title" content="aixohub 投研室">
+  <meta property="og:description" content="Badges# Experimental, could change in the future or be removed
+Badges can be used to annotate your pages with additional information or mark specific places in markdown content.
+TitleValue Hugo0.147.6 BuildPassing Coverage25% Issues120
+Examples# Shortcode Output {{&lt; badge style=&#34;info&#34; title=&#34;hugo&#34; value=&#34;0.147.6&#34; &gt;}} Hugo0.147.6 {{&lt; badge style=&#34;success&#34; title=&#34;Build&#34; value=&#34;Passing&#34; &gt;}} BuildPassing {{&lt; badge style=&#34;warning&#34; title=&#34;Coverage&#34; value=&#34;25%&#34; &gt;}} Coverage25% {{&lt; badge style=&#34;danger&#34; title=&#34;Issues&#34; value=&#34;120&#34; &gt;}} Issues120 {{&lt; badge style=&#34;info&#34; title=&#34;Title&#34; &gt;}} Title {{&lt; badge style=&#34;info&#34; value=&#34;Value&#34; &gt;}} Value {{&lt; badge title=&#34;Default&#34; &gt;}} Default Use in links# A badge can be wrapped in markdown link producing following result: Hugo0.147.6">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+
+
+  <meta itemprop="name" content="aixohub 投研室">
+  <meta itemprop="description" content="Badges# Experimental, could change in the future or be removed
+Badges can be used to annotate your pages with additional information or mark specific places in markdown content.
+TitleValue Hugo0.147.6 BuildPassing Coverage25% Issues120
+Examples# Shortcode Output {{&lt; badge style=&#34;info&#34; title=&#34;hugo&#34; value=&#34;0.147.6&#34; &gt;}} Hugo0.147.6 {{&lt; badge style=&#34;success&#34; title=&#34;Build&#34; value=&#34;Passing&#34; &gt;}} BuildPassing {{&lt; badge style=&#34;warning&#34; title=&#34;Coverage&#34; value=&#34;25%&#34; &gt;}} Coverage25% {{&lt; badge style=&#34;danger&#34; title=&#34;Issues&#34; value=&#34;120&#34; &gt;}} Issues120 {{&lt; badge style=&#34;info&#34; title=&#34;Title&#34; &gt;}} Title {{&lt; badge style=&#34;info&#34; value=&#34;Value&#34; &gt;}} Value {{&lt; badge title=&#34;Default&#34; &gt;}} Default Use in links# A badge can be wrapped in markdown link producing following result: Hugo0.147.6">
+  <meta itemprop="wordCount" content="101">
+
+<title>Badges | aixohub 投研室</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/posts/example/shortcodes/experimental/badges/">
+<link rel="stylesheet" href="/book.min.cc2c524ed250aac81b23d1f4af87344917b325208841feca0968fe450f570575.css" integrity="sha256-zCxSTtJQqsgbI9H0r4c0SRezJSCIQf7KCWj&#43;RQ9XBXU=" crossorigin="anonymous">
+
+
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/zh-cn.search.min.14b461fee3beb2995fe5d683fbd68b4833e387a74819eefd8e2f1af9498485ff.js" integrity="sha256-FLRh/uO&#43;splf5daD&#43;9aLSDPjh6dIGe79ji8a&#43;UmEhf8=" crossorigin="anonymous"></script>
+
+
+
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-posts">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>aixohub 投研室</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-296c586fa31146861517493958d7f839" class="toggle"  />
+    <label for="section-296c586fa31146861517493958d7f839" class="flex">
+      <a role="button" class="">
+        InteractiveBrokers 盈透证券</a>
+      <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/ibkr/ibkr-open-account-1/" class="">
+      IBKR 盈透证券 开户</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/ibkr/ibkr-open-account-2/" class="">
+      IBKR盈透证券申请多个账户&amp;内部转账</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/ibkr/ibkr-paper-trading/" class="">
+      IBKR 模拟交易</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/ibkr/ibkr-sell/" class="">
+      ibkr盈透证券美股-股票买卖</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/ibkr/ibkr-charge-ach/" class="">
+      ibkr 获取ACH转账的路由号码和账户号码</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/ibkr/ibkr-trade-perission/" class="">
+      ibkr 开通交易权限</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/ibkr/ibkr-tips-001/" class="">
+      IBKR盈透证券美股-推荐朋友注册IBKR获200美元</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/ibkr/ibkr-tips-002/" class="">
+      IBKR盈透证券-多个终端同时登录</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/ibkr/ibkr-tips-003/" class="">
+      IBKR盈透用户-避坑雪盈和盈透的绑定</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-6f99db89db42eaec50a16edb60be067b" class="toggle"  />
+    <label for="section-6f99db89db42eaec50a16edb60be067b" class="flex">
+      <a role="button" class="">
+        schwab 嘉信证券</a>
+      <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/schwab/schwab-open-account/" class="">
+      schwab 嘉信证券 开户</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/schwab/schwab-money-charge/" class="">
+      schwab 美股券商嘉信之电汇入金</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-e47883d16699e4e5b2339ffaaa0052f9" class="toggle"  />
+    <label for="section-e47883d16699e4e5b2339ffaaa0052f9" class="flex">
+      <a href="/docs/quantitative-trading/" class="">
+        量化交易</a>
+      <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/quantitative-trading/quant/" class="">
+      Quant</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>Badges</h3>
+
+  <label for="toc-control">
+    
+    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#examples">Examples</a></li>
+    <li><a href="#use-in-links">Use in links</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+<article class="markdown book-post">
+  <h1>
+    Badges
+  </h1>
+  
+
+
+  
+
+  
+
+
+  <div class="book-post-content markdown-inner"><h1 id="badges">Badges<a class="anchor" href="#badges">#</a></h1>
+<blockquote class='book-hint warning'>
+<p>Experimental, could change in the future or be removed</p></blockquote><p>Badges can be used to annotate your pages with additional information or mark specific places in markdown content.</p>
+<p><span class="book-badge default"><span class="book-badge-title">Title</span><span class="book-badge-value">Value</span></span>
+<span class="book-badge info"><span class="book-badge-title">Hugo</span><span class="book-badge-value">0.147.6</span></span>
+<span class="book-badge success"><span class="book-badge-title">Build</span><span class="book-badge-value">Passing</span></span>
+<span class="book-badge warning"><span class="book-badge-title">Coverage</span><span class="book-badge-value">25%</span></span>
+<span class="book-badge danger"><span class="book-badge-title">Issues</span><span class="book-badge-value">120</span></span></p>
+<h2 id="examples">Examples<a class="anchor" href="#examples">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>Shortcode</th>
+          <th>Output</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>{{&lt; badge style=&quot;info&quot; title=&quot;hugo&quot; value=&quot;0.147.6&quot; &gt;}}</code></td>
+          <td><span class="book-badge info"><span class="book-badge-title">Hugo</span><span class="book-badge-value">0.147.6</span></span></td>
+      </tr>
+      <tr>
+          <td><code>{{&lt; badge style=&quot;success&quot; title=&quot;Build&quot; value=&quot;Passing&quot; &gt;}}</code></td>
+          <td><span class="book-badge success"><span class="book-badge-title">Build</span><span class="book-badge-value">Passing</span></span></td>
+      </tr>
+      <tr>
+          <td><code>{{&lt; badge style=&quot;warning&quot; title=&quot;Coverage&quot; value=&quot;25%&quot; &gt;}}</code></td>
+          <td><span class="book-badge warning"><span class="book-badge-title">Coverage</span><span class="book-badge-value">25%</span></span></td>
+      </tr>
+      <tr>
+          <td><code>{{&lt; badge style=&quot;danger&quot; title=&quot;Issues&quot; value=&quot;120&quot; &gt;}}</code></td>
+          <td><span class="book-badge danger"><span class="book-badge-title">Issues</span><span class="book-badge-value">120</span></span></td>
+      </tr>
+      <tr>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td><code>{{&lt; badge style=&quot;info&quot; title=&quot;Title&quot; &gt;}}</code></td>
+          <td><span class="book-badge info"><span class="book-badge-title">Title</span></span></td>
+      </tr>
+      <tr>
+          <td><code>{{&lt; badge style=&quot;info&quot; value=&quot;Value&quot; &gt;}}</code></td>
+          <td><span class="book-badge info"><span class="book-badge-value">Value</span></span></td>
+      </tr>
+      <tr>
+          <td><code>{{&lt; badge title=&quot;Default&quot; &gt;}}</code></td>
+          <td><span class="book-badge default"><span class="book-badge-value">Default</span></span></td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="use-in-links">Use in links<a class="anchor" href="#use-in-links">#</a></h2>
+<p>A badge can be wrapped in markdown link producing following result: <a href="https://github.com/gohugoio/hugo/releases/tag/v0.147.6"><span class="book-badge default"><span class="book-badge-title">Hugo</span><span class="book-badge-value">0.147.6</span></span></a></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>[<span style="color:#75715e">{{</span><span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">badge</span> <span style="color:#a6e22e">title</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Hugo&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;0.147.6&#34;</span> <span style="color:#f92672">&gt;</span><span style="color:#75715e">}}</span>](https://github.com/gohugoio/hugo/releases/tag/v0.147.6)</span></span></code></pre></div></div>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+  <div>
+  
+    <a href="/posts/example/shortcodes/experimental/asciinema/" class="flex align-center">
+      <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+      <span>Asciinema</span>
+    </a>
+  
+  </div>
+  <div>
+  
+    <a href="/posts/example/shortcodes/experimental/cards/" class="flex align-center">
+      <span>Cards</span>
+      <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+    </a>
+  
+  </div>
+</div>
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#examples">Examples</a></li>
+    <li><a href="#use-in-links">Use in links</a></li>
+  </ul>
+</nav>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

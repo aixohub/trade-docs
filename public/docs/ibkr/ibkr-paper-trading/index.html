@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="IBKR 模拟交易# Paper Trading（模拟交易） 是交易中非常重要的一部分，不可或缺的一环，无论对于普通交易者，还是对于量化交易
+以下是进行 Paper Trading 的主要好处：
+对于广大的炒股人员来说# 1. 熟悉交易平台和工具# 好处：# 熟悉操作流程：通过模拟交易，可以熟悉交易平台的功能和操作流程，避免实盘交易时因操作失误导致损失。 应用场景：# 新注册的用户可以通过模拟交易熟悉券商app的看盘，下单，平仓等功能，比如订单上各种条件设置。 2. 无风险验证交易想法# 好处：# 快速验证想法：模拟交易可以快速验证交易想法，避免在实盘中浪费时间和资金。 低成本试错：在模拟交易中，可以低成本地尝试不同的策略和方法，找到最优解。 应用场景：# 当有一个好的交易想法时，可以通过模拟交易快速验证想法的可行性。 3. 提升交易心理素质# 好处：# 模拟真实交易环境：模拟交易可以模拟真实的市场波动和资金变动，帮助交易员适应交易中的心理压力。 减少情绪化交易：通过模拟交易，可以练习在压力下保持冷静，避免情绪化决策。 应用场景：# 新手交易员可以通过模拟交易锻炼心理素质，为实盘交易做好准备。 4. 积累经验和信心# 好处：# 无风险积累经验：模拟交易可以无风险地积累交易经验，提升对市场的理解。 增强信心：通过模拟交易的成功，可以增强对策略的信心，为实盘交易做好准备。 应用场景：# 交易员在实盘交易前，通过模拟交易积累足够的经验和信心。 对于量化交易来说# 1. 无风险验证策略# 好处：# 测试策略有效性：在无风险的环境中，可以验证策略在实时市场中的表现，避免因策略缺陷导致的实盘亏损。 发现潜在问题：通过模拟交易，可以发现策略在实盘中可能遇到的问题，例如信号延迟、滑点、流动性不足等。 应用场景：# 新策略开发后，先在模拟环境中运行，确保其逻辑正确且稳定。 2. 优化交易执行# 好处：# 测试订单执行效率：模拟交易可以帮助测试订单执行的速度和准确性，优化交易流程。 减少滑点和冲击成本：通过模拟交易，可以评估策略在不同市场条件下的滑点和冲击成本，优化执行算法。 应用场景：# 高频交易策略需要在模拟环境中测试订单执行效率。 合理的交易流程# 111
+ibkr 获取模拟账号# 登录用户名如图所示
+账号是DU 开头的
+模拟交易的密码跟实盘交易账号的密码是一样的
+登录模拟交易账号# 112
+">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/docs/ibkr/ibkr-paper-trading/">
+  <meta property="og:site_name" content="aixohub 投研室">
+  <meta property="og:title" content="IBKR 模拟交易">
+  <meta property="og:description" content="IBKR 模拟交易# Paper Trading（模拟交易） 是交易中非常重要的一部分，不可或缺的一环，无论对于普通交易者，还是对于量化交易
+以下是进行 Paper Trading 的主要好处：
+对于广大的炒股人员来说# 1. 熟悉交易平台和工具# 好处：# 熟悉操作流程：通过模拟交易，可以熟悉交易平台的功能和操作流程，避免实盘交易时因操作失误导致损失。 应用场景：# 新注册的用户可以通过模拟交易熟悉券商app的看盘，下单，平仓等功能，比如订单上各种条件设置。 2. 无风险验证交易想法# 好处：# 快速验证想法：模拟交易可以快速验证交易想法，避免在实盘中浪费时间和资金。 低成本试错：在模拟交易中，可以低成本地尝试不同的策略和方法，找到最优解。 应用场景：# 当有一个好的交易想法时，可以通过模拟交易快速验证想法的可行性。 3. 提升交易心理素质# 好处：# 模拟真实交易环境：模拟交易可以模拟真实的市场波动和资金变动，帮助交易员适应交易中的心理压力。 减少情绪化交易：通过模拟交易，可以练习在压力下保持冷静，避免情绪化决策。 应用场景：# 新手交易员可以通过模拟交易锻炼心理素质，为实盘交易做好准备。 4. 积累经验和信心# 好处：# 无风险积累经验：模拟交易可以无风险地积累交易经验，提升对市场的理解。 增强信心：通过模拟交易的成功，可以增强对策略的信心，为实盘交易做好准备。 应用场景：# 交易员在实盘交易前，通过模拟交易积累足够的经验和信心。 对于量化交易来说# 1. 无风险验证策略# 好处：# 测试策略有效性：在无风险的环境中，可以验证策略在实时市场中的表现，避免因策略缺陷导致的实盘亏损。 发现潜在问题：通过模拟交易，可以发现策略在实盘中可能遇到的问题，例如信号延迟、滑点、流动性不足等。 应用场景：# 新策略开发后，先在模拟环境中运行，确保其逻辑正确且稳定。 2. 优化交易执行# 好处：# 测试订单执行效率：模拟交易可以帮助测试订单执行的速度和准确性，优化交易流程。 减少滑点和冲击成本：通过模拟交易，可以评估策略在不同市场条件下的滑点和冲击成本，优化执行算法。 应用场景：# 高频交易策略需要在模拟环境中测试订单执行效率。 合理的交易流程# 111
+ibkr 获取模拟账号# 登录用户名如图所示
+账号是DU 开头的
+模拟交易的密码跟实盘交易账号的密码是一样的
+登录模拟交易账号# 112">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+
+
+  <meta itemprop="name" content="IBKR 模拟交易">
+  <meta itemprop="description" content="IBKR 模拟交易# Paper Trading（模拟交易） 是交易中非常重要的一部分，不可或缺的一环，无论对于普通交易者，还是对于量化交易
+以下是进行 Paper Trading 的主要好处：
+对于广大的炒股人员来说# 1. 熟悉交易平台和工具# 好处：# 熟悉操作流程：通过模拟交易，可以熟悉交易平台的功能和操作流程，避免实盘交易时因操作失误导致损失。 应用场景：# 新注册的用户可以通过模拟交易熟悉券商app的看盘，下单，平仓等功能，比如订单上各种条件设置。 2. 无风险验证交易想法# 好处：# 快速验证想法：模拟交易可以快速验证交易想法，避免在实盘中浪费时间和资金。 低成本试错：在模拟交易中，可以低成本地尝试不同的策略和方法，找到最优解。 应用场景：# 当有一个好的交易想法时，可以通过模拟交易快速验证想法的可行性。 3. 提升交易心理素质# 好处：# 模拟真实交易环境：模拟交易可以模拟真实的市场波动和资金变动，帮助交易员适应交易中的心理压力。 减少情绪化交易：通过模拟交易，可以练习在压力下保持冷静，避免情绪化决策。 应用场景：# 新手交易员可以通过模拟交易锻炼心理素质，为实盘交易做好准备。 4. 积累经验和信心# 好处：# 无风险积累经验：模拟交易可以无风险地积累交易经验，提升对市场的理解。 增强信心：通过模拟交易的成功，可以增强对策略的信心，为实盘交易做好准备。 应用场景：# 交易员在实盘交易前，通过模拟交易积累足够的经验和信心。 对于量化交易来说# 1. 无风险验证策略# 好处：# 测试策略有效性：在无风险的环境中，可以验证策略在实时市场中的表现，避免因策略缺陷导致的实盘亏损。 发现潜在问题：通过模拟交易，可以发现策略在实盘中可能遇到的问题，例如信号延迟、滑点、流动性不足等。 应用场景：# 新策略开发后，先在模拟环境中运行，确保其逻辑正确且稳定。 2. 优化交易执行# 好处：# 测试订单执行效率：模拟交易可以帮助测试订单执行的速度和准确性，优化交易流程。 减少滑点和冲击成本：通过模拟交易，可以评估策略在不同市场条件下的滑点和冲击成本，优化执行算法。 应用场景：# 高频交易策略需要在模拟环境中测试订单执行效率。 合理的交易流程# 111
+ibkr 获取模拟账号# 登录用户名如图所示
+账号是DU 开头的
+模拟交易的密码跟实盘交易账号的密码是一样的
+登录模拟交易账号# 112">
+  <meta itemprop="wordCount" content="62">
+
+<title>IBKR 模拟交易 | aixohub 投研室</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/docs/ibkr/ibkr-paper-trading/">
+<link rel="stylesheet" href="/book.min.cc2c524ed250aac81b23d1f4af87344917b325208841feca0968fe450f570575.css" integrity="sha256-zCxSTtJQqsgbI9H0r4c0SRezJSCIQf7KCWj&#43;RQ9XBXU=" crossorigin="anonymous">
+
+
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/zh-cn.search.min.14b461fee3beb2995fe5d683fbd68b4833e387a74819eefd8e2f1af9498485ff.js" integrity="sha256-FLRh/uO&#43;splf5daD&#43;9aLSDPjh6dIGe79ji8a&#43;UmEhf8=" crossorigin="anonymous"></script>
+
+
+
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-docs">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>aixohub 投研室</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-296c586fa31146861517493958d7f839" class="toggle" checked />
+    <label for="section-296c586fa31146861517493958d7f839" class="flex">
+      <a role="button" class="">
+        InteractiveBrokers 盈透证券</a>
+      <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/ibkr/ibkr-open-account-1/" class="">
+      IBKR 盈透证券 开户</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/ibkr/ibkr-open-account-2/" class="">
+      IBKR盈透证券申请多个账户&amp;内部转账</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/ibkr/ibkr-paper-trading/" class="active">
+      IBKR 模拟交易</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/ibkr/ibkr-sell/" class="">
+      ibkr盈透证券美股-股票买卖</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/ibkr/ibkr-charge-ach/" class="">
+      ibkr 获取ACH转账的路由号码和账户号码</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/ibkr/ibkr-trade-perission/" class="">
+      ibkr 开通交易权限</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/ibkr/ibkr-tips-001/" class="">
+      IBKR盈透证券美股-推荐朋友注册IBKR获200美元</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/ibkr/ibkr-tips-002/" class="">
+      IBKR盈透证券-多个终端同时登录</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/ibkr/ibkr-tips-003/" class="">
+      IBKR盈透用户-避坑雪盈和盈透的绑定</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-6f99db89db42eaec50a16edb60be067b" class="toggle"  />
+    <label for="section-6f99db89db42eaec50a16edb60be067b" class="flex">
+      <a role="button" class="">
+        schwab 嘉信证券</a>
+      <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/schwab/schwab-open-account/" class="">
+      schwab 嘉信证券 开户</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/schwab/schwab-money-charge/" class="">
+      schwab 美股券商嘉信之电汇入金</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-e47883d16699e4e5b2339ffaaa0052f9" class="toggle"  />
+    <label for="section-e47883d16699e4e5b2339ffaaa0052f9" class="flex">
+      <a href="/docs/quantitative-trading/" class="">
+        量化交易</a>
+      <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/quantitative-trading/quant/" class="">
+      Quant</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>IBKR 模拟交易</h3>
+
+  <label for="toc-control">
+    
+    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#ibkr-模拟交易">IBKR 模拟交易</a></li>
+    <li><a href="#对于广大的炒股人员来说">对于广大的炒股人员来说</a>
+      <ul>
+        <li><a href="#1-熟悉交易平台和工具">1. <strong>熟悉交易平台和工具</strong></a></li>
+        <li><a href="#2-无风险验证交易想法">2. <strong>无风险验证交易想法</strong></a></li>
+        <li><a href="#3-提升交易心理素质">3. <strong>提升交易心理素质</strong></a></li>
+        <li><a href="#4-积累经验和信心">4. <strong>积累经验和信心</strong></a></li>
+        <li><a href="#好处-3">好处：</a></li>
+        <li><a href="#应用场景-3">应用场景：</a></li>
+        <li><a href="#对于量化交易来说">对于量化交易来说</a></li>
+        <li><a href="#1-无风险验证策略">1. <strong>无风险验证策略</strong></a></li>
+        <li><a href="#2-优化交易执行">2. <strong>优化交易执行</strong></a></li>
+        <li><a href="#合理的交易流程">合理的交易流程</a></li>
+        <li><a href="#ibkr-获取模拟账号">ibkr 获取模拟账号</a></li>
+        <li><a href="#登录模拟交易账号">登录模拟交易账号</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h2 id="ibkr-模拟交易">IBKR 模拟交易<a class="anchor" href="#ibkr-%e6%a8%a1%e6%8b%9f%e4%ba%a4%e6%98%93">#</a></h2>
+<p><strong>Paper Trading（模拟交易）</strong> 是交易中非常重要的一部分，不可或缺的一环，无论对于普通交易者，还是对于量化交易</p>
+<p>以下是进行 Paper Trading 的主要好处：</p>
+<h2 id="对于广大的炒股人员来说">对于广大的炒股人员来说<a class="anchor" href="#%e5%af%b9%e4%ba%8e%e5%b9%bf%e5%a4%a7%e7%9a%84%e7%82%92%e8%82%a1%e4%ba%ba%e5%91%98%e6%9d%a5%e8%af%b4">#</a></h2>
+<h3 id="1-熟悉交易平台和工具">1. <strong>熟悉交易平台和工具</strong><a class="anchor" href="#1-%e7%86%9f%e6%82%89%e4%ba%a4%e6%98%93%e5%b9%b3%e5%8f%b0%e5%92%8c%e5%b7%a5%e5%85%b7">#</a></h3>
+<h4 id="好处">好处：<a class="anchor" href="#%e5%a5%bd%e5%a4%84">#</a></h4>
+<ul>
+<li><strong>熟悉操作流程</strong>：通过模拟交易，可以熟悉交易平台的功能和操作流程，避免实盘交易时因操作失误导致损失。</li>
+</ul>
+<h4 id="应用场景">应用场景：<a class="anchor" href="#%e5%ba%94%e7%94%a8%e5%9c%ba%e6%99%af">#</a></h4>
+<ul>
+<li>新注册的用户可以通过模拟交易熟悉券商app的看盘，下单，平仓等功能，比如订单上各种条件设置。</li>
+</ul>
+<h3 id="2-无风险验证交易想法">2. <strong>无风险验证交易想法</strong><a class="anchor" href="#2-%e6%97%a0%e9%a3%8e%e9%99%a9%e9%aa%8c%e8%af%81%e4%ba%a4%e6%98%93%e6%83%b3%e6%b3%95">#</a></h3>
+<h4 id="好处-1">好处：<a class="anchor" href="#%e5%a5%bd%e5%a4%84-1">#</a></h4>
+<ul>
+<li><strong>快速验证想法</strong>：模拟交易可以快速验证交易想法，避免在实盘中浪费时间和资金。</li>
+<li><strong>低成本试错</strong>：在模拟交易中，可以低成本地尝试不同的策略和方法，找到最优解。</li>
+</ul>
+<h4 id="应用场景-1">应用场景：<a class="anchor" href="#%e5%ba%94%e7%94%a8%e5%9c%ba%e6%99%af-1">#</a></h4>
+<ul>
+<li>当有一个好的交易想法时，可以通过模拟交易快速验证想法的可行性。</li>
+</ul>
+<h3 id="3-提升交易心理素质">3. <strong>提升交易心理素质</strong><a class="anchor" href="#3-%e6%8f%90%e5%8d%87%e4%ba%a4%e6%98%93%e5%bf%83%e7%90%86%e7%b4%a0%e8%b4%a8">#</a></h3>
+<h4 id="好处-2">好处：<a class="anchor" href="#%e5%a5%bd%e5%a4%84-2">#</a></h4>
+<ul>
+<li><strong>模拟真实交易环境</strong>：模拟交易可以模拟真实的市场波动和资金变动，帮助交易员适应交易中的心理压力。</li>
+<li><strong>减少情绪化交易</strong>：通过模拟交易，可以练习在压力下保持冷静，避免情绪化决策。</li>
+</ul>
+<h4 id="应用场景-2">应用场景：<a class="anchor" href="#%e5%ba%94%e7%94%a8%e5%9c%ba%e6%99%af-2">#</a></h4>
+<ul>
+<li>新手交易员可以通过模拟交易锻炼心理素质，为实盘交易做好准备。</li>
+</ul>
+<h3 id="4-积累经验和信心">4. <strong>积累经验和信心</strong><a class="anchor" href="#4-%e7%a7%af%e7%b4%af%e7%bb%8f%e9%aa%8c%e5%92%8c%e4%bf%a1%e5%bf%83">#</a></h3>
+<h3 id="好处-3">好处：<a class="anchor" href="#%e5%a5%bd%e5%a4%84-3">#</a></h3>
+<ul>
+<li><strong>无风险积累经验</strong>：模拟交易可以无风险地积累交易经验，提升对市场的理解。</li>
+<li><strong>增强信心</strong>：通过模拟交易的成功，可以增强对策略的信心，为实盘交易做好准备。</li>
+</ul>
+<h3 id="应用场景-3">应用场景：<a class="anchor" href="#%e5%ba%94%e7%94%a8%e5%9c%ba%e6%99%af-3">#</a></h3>
+<ul>
+<li>交易员在实盘交易前，通过模拟交易积累足够的经验和信心。</li>
+</ul>
+<h3 id="对于量化交易来说">对于量化交易来说<a class="anchor" href="#%e5%af%b9%e4%ba%8e%e9%87%8f%e5%8c%96%e4%ba%a4%e6%98%93%e6%9d%a5%e8%af%b4">#</a></h3>
+<h3 id="1-无风险验证策略">1. <strong>无风险验证策略</strong><a class="anchor" href="#1-%e6%97%a0%e9%a3%8e%e9%99%a9%e9%aa%8c%e8%af%81%e7%ad%96%e7%95%a5">#</a></h3>
+<h4 id="好处-4">好处：<a class="anchor" href="#%e5%a5%bd%e5%a4%84-4">#</a></h4>
+<ul>
+<li><strong>测试策略有效性</strong>：在无风险的环境中，可以验证策略在实时市场中的表现，避免因策略缺陷导致的实盘亏损。</li>
+<li><strong>发现潜在问题</strong>：通过模拟交易，可以发现策略在实盘中可能遇到的问题，例如信号延迟、滑点、流动性不足等。</li>
+</ul>
+<h4 id="应用场景-4">应用场景：<a class="anchor" href="#%e5%ba%94%e7%94%a8%e5%9c%ba%e6%99%af-4">#</a></h4>
+<ul>
+<li>新策略开发后，先在模拟环境中运行，确保其逻辑正确且稳定。</li>
+</ul>
+<h3 id="2-优化交易执行">2. <strong>优化交易执行</strong><a class="anchor" href="#2-%e4%bc%98%e5%8c%96%e4%ba%a4%e6%98%93%e6%89%a7%e8%a1%8c">#</a></h3>
+<h4 id="好处-5">好处：<a class="anchor" href="#%e5%a5%bd%e5%a4%84-5">#</a></h4>
+<ul>
+<li><strong>测试订单执行效率</strong>：模拟交易可以帮助测试订单执行的速度和准确性，优化交易流程。</li>
+<li><strong>减少滑点和冲击成本</strong>：通过模拟交易，可以评估策略在不同市场条件下的滑点和冲击成本，优化执行算法。</li>
+</ul>
+<h4 id="应用场景-5">应用场景：<a class="anchor" href="#%e5%ba%94%e7%94%a8%e5%9c%ba%e6%99%af-5">#</a></h4>
+<ul>
+<li>高频交易策略需要在模拟环境中测试订单执行效率。</li>
+</ul>
+<h3 id="合理的交易流程">合理的交易流程<a class="anchor" href="#%e5%90%88%e7%90%86%e7%9a%84%e4%ba%a4%e6%98%93%e6%b5%81%e7%a8%8b">#</a></h3>
+<p>111</p>
+<h3 id="ibkr-获取模拟账号">ibkr 获取模拟账号<a class="anchor" href="#ibkr-%e8%8e%b7%e5%8f%96%e6%a8%a1%e6%8b%9f%e8%b4%a6%e5%8f%b7">#</a></h3>
+<p>登录用户名如图所示</p>
+<p>账号是DU 开头的</p>
+<p>模拟交易的密码跟实盘交易账号的密码是一样的</p>
+<h3 id="登录模拟交易账号">登录模拟交易账号<a class="anchor" href="#%e7%99%bb%e5%bd%95%e6%a8%a1%e6%8b%9f%e4%ba%a4%e6%98%93%e8%b4%a6%e5%8f%b7">#</a></h3>
+<p>112</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+<div>
+
+</div>
+
+<div>
+
+</div>
+
+</div>
+
+
+
+
+
+  
+  
+  
+  <div class="flex flex-wrap justify-between">
+    <span>
+    
+      <a href="/docs/ibkr/ibkr-open-account-2/" class="flex align-center">
+        <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+        <span>IBKR盈透证券申请多个账户&amp;内部转账</span>
+      </a>
+    
+    </span>
+    <span>
+    
+      <a href="/docs/ibkr/ibkr-sell/" class="flex align-center">
+        <span>ibkr盈透证券美股-股票买卖</span>
+        <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+      </a>
+    
+    </span>
+  </div>
+  
+
+
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#ibkr-模拟交易">IBKR 模拟交易</a></li>
+    <li><a href="#对于广大的炒股人员来说">对于广大的炒股人员来说</a>
+      <ul>
+        <li><a href="#1-熟悉交易平台和工具">1. <strong>熟悉交易平台和工具</strong></a></li>
+        <li><a href="#2-无风险验证交易想法">2. <strong>无风险验证交易想法</strong></a></li>
+        <li><a href="#3-提升交易心理素质">3. <strong>提升交易心理素质</strong></a></li>
+        <li><a href="#4-积累经验和信心">4. <strong>积累经验和信心</strong></a></li>
+        <li><a href="#好处-3">好处：</a></li>
+        <li><a href="#应用场景-3">应用场景：</a></li>
+        <li><a href="#对于量化交易来说">对于量化交易来说</a></li>
+        <li><a href="#1-无风险验证策略">1. <strong>无风险验证策略</strong></a></li>
+        <li><a href="#2-优化交易执行">2. <strong>优化交易执行</strong></a></li>
+        <li><a href="#合理的交易流程">合理的交易流程</a></li>
+        <li><a href="#ibkr-获取模拟账号">ibkr 获取模拟账号</a></li>
+        <li><a href="#登录模拟交易账号">登录模拟交易账号</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
