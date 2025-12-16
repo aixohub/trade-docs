@@ -1,0 +1,36 @@
+# config.toml - Hugo PaperMod 主题配置
+
+# 基础配置
+baseURL = "https://www.aixohub.com/"
+title = "aixohub 投研室"
+theme = "hugo-book"
+languageCode = "zh-CN"
+defaultContentLanguage = "zh-cn"
+
+[menu]
+[[menu.home]]
+  name = '美股投资'
+  pageRef = '/docs/ibkr/ibkr-open-account-1'
+  weight = 1
+
+[[menu.home]]
+  pageRef = '/docs/ibkr/ibkr-open-account-1'
+  weight = 10
+  parent = '美股投资'
+
+[[menu.home]]
+  pageRef = '/docs/schwab/schwab-open-account/'
+  weight = 20
+  parent = '美股投资'
+
+
+
+[[menu.home]]
+  name = '量化交易'
+  pageRef = '/docs/quantitative-trading'
+  weight = 2
+
+[[menu.home]]
+  name = 'Github'
+  url = 'https://github.com/alex-shpak/hugo-book/'
+  weight = 3
