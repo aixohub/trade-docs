@@ -13,7 +13,7 @@ weight: 2
 ## schwab 嘉信证券 开户
 
 
-## 嘉信schwab 的介绍
+## 一、嘉信schwab 的介绍
 
 **Schwab Broker（嘉信理财)** 是美国知名的金融服务公司，提供经纪、银行、财富管理等服务，主要面向个人投资者和机构投资者。
 
@@ -70,7 +70,7 @@ Schwab 提供多种投资工具，包括：
 全程无需科学上网
 
 
-## 嘉信schwab 开户步骤
+## 二、嘉信schwab 开户步骤
 ### 步骤1
 要注册 schwab international， 这个不需要美国的ssn
 
@@ -107,7 +107,7 @@ Schwab 提供多种投资工具，包括：
 中国内地可以打客服电话 **400 120 6217** ，电话会转到美国，所以要在美国的上班时间打，也就是国内21点后
 
 
-填写护照的信息
+>填写护照的信息
 
 {{< image src="../pic/schwab-openaccount-05.png" alt="schwab-ach-01" title="schwab-ach-01r" loading="lazy" >}}
 
@@ -116,22 +116,117 @@ Schwab 提供多种投资工具，包括：
 
 {{< image src="../pic/schwab-openaccount-06.png" alt="schwab-ach-01" title="schwab-ach-01r" loading="lazy" >}}
 
+### 步骤4 设置登录账号，请牢记这些信息
 
-### 步骤4 上传文件
+ 填上的账号 密码 和密保问题，并记下这些信息，后续登录账号使用，
+ 
+ 点击「Continue」
 
 
-后面就是上传护照照片，地址证明了，同意协议了
+### 步骤5 输入居住地址
+
+填写你的地址信息，全部需要是英文或拼音，
+
+后续需要上传地址证明，一定要正确填写。填完后点击continue继续
+
+**请保证这里填的地址和后面上传的地址证明的地址一致**
+
+### 步骤6 设置紧急联系人
+
+是否需要添加一个可信赖的联系人。如果将来账户出现异常操作（比如怀疑被金融诈骗或你的健康问题影响判断），券商可以联系这个人来确认你的情况。
+
+其中Trusted Contact 没有操作你账户的权限，不会动用你的资金，只是作为一个紧急联络或核实渠道。
+
+我这里先跳过，点击continue继续。
+
+### 步骤7  选择开账户的目的和资金来源
+
+开账户的目的选择第一项：General purposes 
+
+资金来源选择第一项：工资
+
+### 步骤8  填写工作信息
+
+
+就业状况，选择Employed受雇，这样可以避免麻烦。
+
+如果你的雇主公司名称太长，可以缩写主要的信息即可，并不会进行工商验证核查
+
+### 步骤9  
+
+询问你是为上市公司高管或者证券相关金融机构的职员 全部选 NO, 点击continue继续
+
+无纸化文件，全部勾选，点击continue继续。
+
+### 步骤10 添加交易功能
+
+Margin 融资账户，选 Yes，
+
+Option Trading 期权交易，选 Yes，
+
+thinkorswim 交易软件， 选 Yes
+
+**嘉信在开户后升级账户权限需要准备各种材料，为了方便，这里一定要选 yes**
+
+### 步骤11 期权功能选择策略级别
+
+{{< image src="../pic/schwab-openaccount-09.png" alt="schwab-ach-01" title="schwab-ach-01r" loading="lazy" >}}
+
+
+选择第三个 spread , 然后点击continue继续。
+
+### 步骤12 填写你的财务状况和交易历史
+
+
+参考数据如下
+
+Total net worth：210,000
+
+Liquid net worth:：110,000
+
+Annual income: 51,000
+
+Years of experience：8
+
+Average treads per year：90~100
+
+Average trade amount：8,000~10,000
+
+
+
+### 步骤13 交易经验
+
+选择 good 
+
+年数都填6年以上
+
+### 步骤14 检查填写的信息 和 同意协议
+
+检查我们的申请信息，仔细核对。没有问题点击continue继续。
+
+
+接下来一大堆协议，全部勾选上，有兴趣的自己翻译看一下。
+
+
+### 步骤15 上传文件
+
+{{< image src="../pic/schwab-openaccount-10.png" alt="schwab-ach-01" title="schwab-ach-01r" loading="lazy" >}}
+
+上传护照照片，地址证明，**文件名必须是英文的**
 
 中国的护照信息都在第一页上，所以两页的信息，都拍第一页的就可以
 
 
-### 步骤5 等待审核
+### 步骤16 等待审核
 
 
 等待审核通过➡️收到邮件通过，可以入金
+
+{{< image src="../pic/schwab-openaccount-08.png" alt="schwab-ach-01" title="schwab-ach-01r" loading="lazy" >}}
+
 注册完毕，填写w-8ben表，这个可以免税
 
-##  下载嘉信schwab app
+## 三、下载嘉信schwab app
 
 ### 手机端
 手机端有两款app thinkorswim 和 SCHWAB MOBILE
@@ -143,7 +238,13 @@ Schwab 提供多种投资工具，包括：
 https://www.schwab.com/trading/thinkorswim/desktop
 
 
-## 嘉信schwab 美元入金
+## 四、嘉信账户首次登录配置
+
+登录嘉信账户需要手机查收验证码，这时候记得拨打人工客服电话 **400 120 6217** （中国大陆可以拨打这个）获取帮助。
+
+首次登录建议你们使用嘉信 app，后续网页登录的话，手机软件直接授权同意就可以
+
+## 五、嘉信schwab 美元入金
 如果有美国的银行卡，可以ach入金，ach入金可以免所有费用，
 
 没有的话只能电汇入金或者绑定wise入金,电汇入金的话，查看汇款方式如下
